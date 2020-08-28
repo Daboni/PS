@@ -1,0 +1,33 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(vector<vector<int>> board, vector<int> moves) {
+	int answer = 0;
+
+	vector<int> basket;
+
+	for (int i = 0; i < moves.size(); i++) {
+		int a = moves[i];
+		for (int j = 0; j < board[0].size(); j++) {
+			if (board[j][a-1]) {
+				basket.push_back(board[j][a-1]);
+				board[j][a-1] = 0;
+				break;
+			}
+		}
+	}
+		for (int i = 0; (basket.size() != 0) && (i < basket.size() - 1); i++) {
+		if (basket.size() == 1) break;
+
+		if (basket[i] == basket[i + 1]) {
+			basket.erase(basket.begin() + i);
+			basket.erase(basket.begin() + i);
+			answer += 2;
+			i = -1;
+		}
+	}
+
+	return answer;    
+}
