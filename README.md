@@ -1,3 +1,3 @@
 # cpp
 
-To improve Problem solbing ability
+To improve Problem solving ability
