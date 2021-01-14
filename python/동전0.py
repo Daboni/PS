@@ -33,3 +33,5 @@ for coin in coins:
         break
     res += price // coin
     price %= coin
+
+print(res)
