@@ -1,9 +1,3 @@
-# 동적 계획법 - 이항계수
-"""
-문제
-동적 계획법을 이용하여 이항 계수를 구현한다.
-"""
-
 cache = [[0 for _ in range(30)] for __ in range(30)]
 
 def bino(n,r):
