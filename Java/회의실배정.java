@@ -1,10 +1,9 @@
-package ssafy.com;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class 탐욕법 {
+public class 회의실배정 {
 	
 	static class Meeting implements Comparable<Meeting>{
 		int start, end;
